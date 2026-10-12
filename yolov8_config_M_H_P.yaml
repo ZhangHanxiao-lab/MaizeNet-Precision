@@ -1,0 +1,43 @@
+# train_config.yaml
+
+# 数据与模型配置
+data: ./data/corn.yaml         # 数据集配置文件路径
+model: ./model/yolov8s_M_H_P.yaml       # 模型结构（也可替换为best.pt等权重）
+
+# 输入尺寸
+imgsz: [1024, 1024]         # 输入图片尺寸，支持单值或(h, w)格式
+
+# 训练参数
+epochs: 600                # 训练轮数
+batch: 16                 # 每批次图像数量
+workers: 0                # Dataloader使用的线程数
+
+# 日志与输出设置
+project: ./logs/data1           # 项目根目录
+name: yolov8s_M_H_P              # 子目录名，会自动创建 logs/yolov8
+
+# 优化器与调度器
+#optimizer: SGD            # 可选 'SGD', 'Adam', 'AdamW'
+lr0: 0.005                 # 初始学习率
+cos_lr: True                 # 
+warmup_epochs: 5.0        # 预热轮数
+
+# freeze: 0
+
+# 数据增强（根据需要调整）
+box: 7.5
+cls: 0.5
+dfl: 1.5
+erasing: 0.4
+cutmix: 0.0
+mosaic: 0.5
+mixup: 0.0
+
+# 其他高级训练参数
+patience: 0              # 早停轮数
+device: 0                 # 训练设备，0为第一个GPU
+seed: 3407                  # 随机种子
+verbose: True
+save: True
+save_period: -1           # 每n轮保存一次模型，-1表示只保存最后和最优模型
+val: True                 # 是否进行验证
