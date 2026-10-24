@@ -97,4 +97,4 @@ On **876 images** with **81,135 annotated seedlings** from five sites, MaizeNet-
 
 ## Data 
 
-The field-image dataset is available from the authors upon request.
+The field-image dataset is available from Zenodo DOI：10.5281/zenodo.23308016.
