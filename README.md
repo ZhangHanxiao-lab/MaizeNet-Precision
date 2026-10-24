@@ -16,7 +16,7 @@
 
 ## Setup
 
-The experiments used **PyTorch 2.5.1 (CUDA 12.1)** and **Ultralytics 8.3.167**.
+The experiments used **PyTorch 2.8.0 (CUDA 12.9)** and **Ultralytics 8.4.135**.
 
 1. Install the corresponding PyTorch build and `ultralytics==8.3.167`.
 2. Copy `MLSKA.py` and `HCM.py` into `ultralytics/nn/modules/`, and import their classes in `ultralytics/nn/tasks.py`:
