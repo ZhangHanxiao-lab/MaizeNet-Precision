@@ -98,3 +98,25 @@ On **876 images** with **81,135 annotated seedlings** from five sites, MaizeNet-
 ## Data 
 
 The field-image dataset is available from Zenodo DOI：10.5281/zenodo.23308016.
+
+
+
+## Model Checkpoints
+
+The ten selected model checkpoints (YOLOv8s and MaizeNet-Precision for each of five runs) are provided in the `checkpoints/` directory as a 12-part 7-Zip archive:
+
+`checkpoints.7z.001` through `checkpoints.7z.012`.
+
+Download all 12 parts into the same local directory. Use 7-Zip to extract `checkpoints.7z.001`; the remaining parts will be processed automatically.
+
+The checkpoint directories correspond to the original dataset split archives:
+
+| Experimental run | Checkpoint directory | Split archive |
+|---|---|---|
+| Run 1 | `data1/` | `datasets.zip` |
+| Run 2 | `data2/` | `datasets2.zip` |
+| Run 3 | `data3/` | `datasets3.zip` |
+| Run 4 | `data4/` | `datasets4.zip` |
+| Run 5 | `data5/` | `datasets5.zip` |
+
+All runs used the fixed training seed 3407. The best-validation checkpoint was retained for testing.
